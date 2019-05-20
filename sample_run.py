@@ -27,7 +27,7 @@ run_command = "./defrag/defrag_clustering " + train_feat + " " + train_lab + " "
 os.system(run_command)
 
 # Agglomeration
-run_command = "./defrag/defrag_agglomeration " + train_feat + " " + grp_file + " " + train_feat_defrag + " avg 0"
+run_command = "./defrag/defrag_agglomeration " + train_feat + " " + grp_file + " " + train_feat_defrag + " -avg 0"
 os.system(run_command)
-run_command = "./defrag/defrag_agglomeration " + test_feat + " " + grp_file + " " + test_feat_defrag + " avg 0"
+run_command = "./defrag/defrag_agglomeration " + test_feat + " " + grp_file + " " + test_feat_defrag + " -avg 0"
 os.system(run_command)
