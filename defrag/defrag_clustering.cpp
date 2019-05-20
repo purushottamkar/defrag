@@ -10,7 +10,7 @@ void help()
 {
 	cout<<"-------------------------------------------"<<endl;
 	cerr<<"Sample Usage :"<<endl;
-	cerr<<"./defrag [input feature file name] [input label file name] [output group file name] -cc 1 -cls 5 -cds 20 -cml 8"<<endl;
+	cerr<<"./defrag_clustering [input feature file name] [input label file name] [output group file name] -cc 1 -cls 5 -cds 20 -cml 8"<<endl;
 	cerr<<endl;
 	cerr<<"-fr  = param.feature_representation  : Use feture repersentation X or XY, default 1 (X)."<<endl;
 	cerr<<"-cml = param.cluster_maxleaf         : Maximum number of features in a leaf node of DEFRAG tree, default 8."<<endl;

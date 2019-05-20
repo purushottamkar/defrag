@@ -421,14 +421,16 @@ void defrag_agglomeration( SMatF* tst_X_Xf, Param& param, _float& agglomeration_
 	group->read_groups(param.grp_file);
 
 	SMatF *tst_X_Xf_D = new SMatF();
-	
-	SMatF* aone = tst_X_Xf->all_ones();
 
-	SMatF *aone_dense = aone->make_dense(group);
 	tst_X_Xf_D = tst_X_Xf->make_dense(group);
-	tst_X_Xf_D->elem_div(aone_dense);
-
+	
+	if(param.avg)
+	{
+		SMatF* aone = tst_X_Xf->all_ones();
+		SMatF *aone_dense = aone->make_dense(group);
+		tst_X_Xf_D->elem_div(aone_dense);
+	}
+	
 	agglomeration_time += timer.toc();
-
 	tst_X_Xf_D->write(param.agg_file);
 }
