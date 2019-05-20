@@ -10,6 +10,8 @@ DEFARG is executed in two steps:
 
 Please refer to sample_run.py for more information on how to use DEFRAG.
 
+Feature and label files should be formatted as expected by Parabel.
+
 # Acknowledgement
 
 The code is adapted and subsequently modified from the source code provided by the authors of [Parabel: Partitioned Label Trees for Extreme Classification with Application to Dynamic Search Advertising](https://dl.acm.org/citation.cfm?id=3185998). 
